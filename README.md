@@ -2,7 +2,8 @@
 A demo of video wallpaper for python3  
 
 ## 使用  
-使用前先将ffplay.exe放入ffmpeg-win64文件夹内（也可在VideoWallpaper.py中修改）  
+1. 执行`pip install pypiwin32`以安装所需的库  
+2. 使用前先将ffplay.exe放入ffmpeg-win64文件夹内（也可在VideoWallpaper.py中修改）  
 
 ## 声明  
 本程序遵循GPL3.0开源协议
