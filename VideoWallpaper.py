@@ -5,23 +5,25 @@ from time import sleep
 
 def _MyCallback(hwnd, extra):#遍历窗口函数的回调函数（提前return退出遍历会报错）
     #查找当前被遍历顶层窗口包含的桌面图标所在窗口
-    icon_window = FindWindowEx(hwnd, None, u"SHELLDLL_icon_window", None)
+    icon_window = FindWindowEx(hwnd, None, "SHELLDLL_DefView", None)
+    print(icon_window)
     if(icon_window!=0):#当前被遍历顶层窗口包含桌面图标所在窗口
         #查找下一个类名为WorkerW的顶层窗口（即静态壁纸所在窗口）
-        workerw = FindWindowEx(None, hwnd, u"WorkerW", None)
+        workerw = FindWindowEx(None, hwnd, "WorkerW", None)
+        print(workerw)
         #隐藏静态壁纸所在窗口
         ShowWindow(workerw, SW_HIDE)
 
 def RunVideoWallpaper(video_path, custom_settings='', ffplay_path=r".\ffmpeg-win64\ffplay.exe"):#设置视频壁纸
     #查找桌面窗口
-    desktop_window = FindWindow(u"Progman", "Program Manager")
+    desktop_window = FindWindow("Progman", "Program Manager")
     #默认播放设置：全屏，无限循环，无输出
     cmdline = "-fs -loop 0 {} \"{}\" -loglevel quiet".format(custom_settings, video_path)
     #创建播放器进程
     CreateProcess(ffplay_path, cmdline, None, None, 0, 0, None, None, STARTUPINFO())
     while(True):#等待播放器窗口创建完毕
         #查找播放器窗口
-        player_window = FindWindow(u"SDL_app", video_path)
+        player_window = FindWindow("SDL_app", video_path)
         if(player_window!=0):#找到播放器窗口
             #视频窗口窗口原点会不在00，sleep一个极短的时间可以解决
             sleep(0.001)
