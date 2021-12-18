@@ -8,9 +8,10 @@ if __name__ == "__main__":
     video_path = r".\videos\N0va LookDev Test - 3.横屏_60fps(Av968128488,P3).mp4"
     #自定义播放设置：静音
     #custom_settings = '-an'
-    custom_settings =''
+    #自定义播放设置：不显示字幕，初始音量10
+    custom_settings ='-sn -volume 10'
     #默认播放设置：全屏，无限循环，无输出
-    cmdline = "-fs -loop 0 \"{}\" -loglevel quiet".format(video_path) + custom_settings
+    cmdline = "-fs -loop 0 \"{}\" -loglevel quiet ".format(video_path) + custom_settings
     #播放器地址
     ffplay_path=r".\ffmpeg-win64\ffplay.exe"
     #创建播放器进程
