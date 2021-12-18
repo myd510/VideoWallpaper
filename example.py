@@ -5,7 +5,7 @@ from time import sleep
 
 if __name__ == "__main__":
     #视频地址
-    video_path = r"N0va LookDev Test - 3.横屏_60fps(Av968128488,P3).mp4"
+    video_path = r".\videos\N0va LookDev Test - 3.横屏_60fps(Av968128488,P3).mp4"
     #自定义播放设置：静音
     #custom_settings = '-an'
     custom_settings =''
