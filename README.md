@@ -6,7 +6,7 @@ A demo of video wallpaper for python3
 2. 使用前先将`ffplay.exe`放入ffmpeg-win64文件夹内（也可在VideoWallpaper.py中修改）  
 
 ## 已知问题  
-在使用win+tab快捷键之后图标会消失（已解决） 
+在使用win+tab快捷键之后图标会消失（已解决）  
 重置播放器窗口位置时静态壁纸窗口重新出现（已解决）  
 
 ## 声明  
