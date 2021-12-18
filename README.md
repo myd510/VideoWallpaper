@@ -7,7 +7,7 @@ A demo of video wallpaper for python3
 
 ## BUGS  
 The icon will disappear after using the win+tab（fixed）  
-The default wallpaper redisplayed（fixed）  
+The default wallpaper redisplayed after using the win+tab（fixed）  
 
 ## NOTES  
 This project uses the GPL3.0 open source license 
