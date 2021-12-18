@@ -24,7 +24,7 @@ def RunVideoWallpaper(video_path, custom_settings='', ffplay_path=r".\ffmpeg-win
         player_window = FindWindow("SDL_app", video_path)
         if(player_window!=0):#找到播放器窗口
             #视频窗口窗口原点会不在00，sleep一个极短的时间可以解决
-            sleep(0.001)
+            sleep(0.01)
             break
     #核心语句，向desktop_window发送0x52C启用Active Desktop
     SendMessageTimeout(desktop_window, 0x52C, 0, 0, SMTO_ABORTIFHUNG, 100)
