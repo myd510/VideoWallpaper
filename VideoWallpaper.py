@@ -22,7 +22,7 @@ def RunVideoWallpaper(player_window_handel):#设置视频壁纸
         EnumWindows(_MyCallback, workerw)
         #获取player_windows名称
         player_windows_name = GetWindowText(player_window_handel)
-        while(True):#防止win+tab将player_window发送到图标窗口的父窗口(原因不明)及SetParent导致静态壁纸窗口重新出现
+        while(True):#防止win+tab导致静态壁纸窗口重新出现及将player_window发送到图标窗口的父窗口(原因不明)
             #隐藏静态壁纸窗口
             ShowWindow(workerw[0], SW_HIDE)
             #判断player_window是否在desktop_window下
@@ -30,4 +30,3 @@ def RunVideoWallpaper(player_window_handel):#设置视频壁纸
             if(player_under_desktop==0):#如果player_window位置不正确
                 #将player_window设置为desktop_window的子窗口
                 SetParent(player_window_handel, desktop_window_handel)
-
