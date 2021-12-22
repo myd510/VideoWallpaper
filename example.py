@@ -21,7 +21,7 @@ if __name__ == "__main__":
         player_window_handel = FindWindow("SDL_app", video_path)
         if(player_window_handel!=0):#找到播放器窗口
             #视频窗口窗口原点会不在00，sleep一个极短的时间可以解决
-            sleep(0.01)
+            sleep(0.1)
             break
     #开始视频壁纸
     VideoWallpaper.RunVideoWallpaper(player_window_handel)
