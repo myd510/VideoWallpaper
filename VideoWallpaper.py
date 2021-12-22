@@ -16,7 +16,7 @@ def RunVideoWallpaper(player_window_handel):#设置视频壁纸
         #设置player_window为desktop_window的子窗口
         SetParent(player_window_handel, desktop_window_handel)
         #核心语句，向desktop_window发送0x52C启用Active Desktop
-        SendMessageTimeout(desktop_window_handel, 0x52C, 0, 0, SMTO_ABORTIFHUNG, 100)
+        SendMessageTimeout(desktop_window_handel, 0x52C, 0, 0, SMTO_ABORTIFHUNG, 500)#如果报TimeOut,增加延时
         #因为有两个同类同名的WorkerW窗口，所以遍历所以顶层窗口
         workerw=[0]
         EnumWindows(_MyCallback, workerw)
