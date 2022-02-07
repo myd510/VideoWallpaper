@@ -1,5 +1,5 @@
 import VideoWallpaper
-from win32process import CreateProcess, STARTUPINFO
+from win32process import CreateProcess, CREATE_NO_WINDOW, STARTUPINFO
 from win32gui import FindWindow
 from time import sleep
 
@@ -14,8 +14,8 @@ if __name__ == "__main__":
     cmdline = "-fs -loop 0 \"{}\" -loglevel quiet ".format(video_path) + custom_settings
     #播放器地址
     ffplay_path=r".\ffmpeg-win64\ffplay.exe"
-    #创建播放器进程
-    CreateProcess(ffplay_path, cmdline, None, None, 0, 0, None, None, STARTUPINFO())
+    #创建播放器进程(无窗口)
+    CreateProcess(ffplay_path, cmdline, None, None, 0, CREATE_NO_WINDOW, None, None, STARTUPINFO())
     while(True):#等待播放器窗口创建完毕
         #查找播放器窗口
         player_window_handel = FindWindow("SDL_app", video_path)
