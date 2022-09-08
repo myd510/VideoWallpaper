@@ -14,4 +14,4 @@ Can't fullscreen(fixed)
 This project uses the GPL3.0 open source license 
 
 ## THANKS  
-本程序核心代码逻辑来自https://www.codeproject.com/Articles/856020/Draw-Behind-Desktop-Icons-in-Windows-plus 
+https://www.codeproject.com/Articles/856020/Draw-Behind-Desktop-Icons-in-Windows-plus 
