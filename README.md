@@ -3,7 +3,7 @@ A demo of video wallpaper for python3
 
 ## USE  
 1. run`pip install pypiwin32`to install the library  
-2. if you want run example.py, move`ffplay.exe`into`./ffmpeg-win64`  
+2. if you want run example.py, download ffmpeg and move`ffplay.exe`into`./ffmpeg-win64`  
 
 ## BUGS  
 The icon will disappear after using the win+tab（fixed）  
